@@ -1,0 +1,139 @@
+.about-us {
+	padding-top: 224px;
+	background: url(../../images/about-us/bg-about-us.jpg) no-repeat center center/cover;
+	width: 100%;
+	height: 560px;
+	color: $text-white;
+}
+
+.our-company {
+	position: relative;
+	margin-top: 106px;
+	&::before {
+		content: "";
+		display: block;
+		background: url(../../images/about-us/bg-our-company.svg) no-repeat top left/cover;
+		width: 62.5%;
+		height: 473px;
+		position: absolute;
+		top: -166px;
+		right: 0;
+	}
+	&__info {
+		p {
+			margin-bottom: 24px;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__time-line {
+		position: relative;
+		margin-top: 144px;
+		.subtitle {
+			top: -20px;
+			bottom: -9%;
+			&_left {
+				left: -82px;
+			}
+		}
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		margin-bottom: 24px;
+	}
+	&__icon {
+		position: relative;
+		margin-right: 16px;
+		width: 148px;
+		font-weight: 700;
+		font-family: $second-font-family;
+		font-size: $font-size-h4;
+		line-height: $line-height-h4;
+		> span {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			@include transform(translate(-50%, -50%));
+		}
+	}
+	&__text {
+		color: $text-dark;
+		h4 {
+			font-size: $font-size-h4;
+			line-height: $line-height-h4;
+			color: $title-color;
+		}
+	}
+}
+
+.our-team {
+	padding: 122px 0 160px;
+	&__image {
+		display: flex;
+	}
+	&__info {
+		p {
+			margin-bottom: 24px;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.slider-gallery {
+	position: relative;
+	background: url(../../images/gallery/bg-gallery.svg) no-repeat center top;
+	padding-top: 122px;
+	margin-bottom: 162px;
+	&__item {
+		position: relative;
+		width: 100%;
+		.container {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			@include transform(translateX(-50%));
+		}
+	}
+	&__img {
+		width: 62.5%;
+		height: 724px;
+		> img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.image__desc {
+			width: 304px;
+		}
+	}
+	.slick-dots {
+		left: 114px;
+		bottom: 24px;
+	}
+
+	.slick-counter {
+		bottom: 32px;
+		left: 62px;
+	}
+
+	.slider-gallery-next,
+	.slider-gallery-prev {
+		position: absolute;
+		left: 64%;
+		bottom: 255px;
+	}
+	.slider-gallery-next {
+		left: 69%;
+	}
+	.line {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 35.5%;
+		border-top: 1px solid #c4c4c4;
+	}
+}
