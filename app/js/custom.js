@@ -67,6 +67,19 @@ $(document).ready(function() {
 		$("body").toggleClass("overflow-hidden");
 	});
 
+	// scrooll to section
+	// scroll section
+	let scrollLink = $(".scroll-down");
+	scrollLink.click(function(e) {
+		e.preventDefault();
+		$("body,html").animate(
+			{
+				scrollTop: $(".company").offset().top
+			},
+			1000
+		);
+	});
+
 	// slider first screen
 	$(function() {
 		$(".slider-first")
@@ -171,4 +184,7 @@ $(document).ready(function() {
 				findCurrentBlock.text(nextSlide + 1);
 			});
 	});
+
+	// animation on page
+	new WOW().init();
 });

@@ -28,6 +28,10 @@ h6 {
 	font-weight: 600;
 }
 
+.wow {
+	visibility: hidden;
+}
+
 .overflow-hidden {
 	overflow: hidden;
 }
@@ -188,6 +192,11 @@ h6 {
 			left: auto;
 			right: 0;
 		}
+		> p {
+			overflow: hidden;
+			white-space: nowrap;
+			animation: typing 3.5s steps(20, end);
+		}
 		> small {
 			display: block;
 			font-size: $base-fs - 2px;
@@ -198,13 +207,34 @@ h6 {
 		}
 		&::after {
 			content: "";
-			width: 64.3%;
+			width: 64.5%;
 			border-top: 1px solid #c4c4c4;
 			position: absolute;
 			bottom: 0;
 			left: 50%;
 			@include transform(translateX(-50%));
+			animation: line 2s;
 		}
+	}
+}
+
+/* The typing effect */
+@keyframes typing {
+	from {
+		width: 0;
+	}
+
+	to {
+		width: 100%;
+	}
+}
+
+@keyframes line {
+	from {
+		width: 0;
+	}
+	to {
+		width: 64.5%;
 	}
 }
 
