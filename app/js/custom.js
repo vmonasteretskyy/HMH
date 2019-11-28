@@ -1,7 +1,6 @@
 $(document).ready(function() {
 	// fixed menu
 	let heightHeader = $(".header").outerHeight();
-	console.log(heightHeader);
 
 	$(window).scroll(function() {
 		let currentPosition = $(window).scrollTop();
@@ -13,20 +12,59 @@ $(document).ready(function() {
 	});
 
 	// menu dropdown
-	$(".dropdown__toggle").click(function(e) {
-		e.preventDefault();
-		// $(".menu__dropdown").slideUp();
-		$(this)
-			.next(".menu__dropdown")
-			.slideToggle();
-	});
+	function openSubMenuOnHover() {
+		$(".menu__item").hover(
+			function() {
+				$(this)
+					.find(".dropdown")
+					.stop(true, true)
+					.delay(200)
+					.fadeIn();
+			},
+			function() {
+				$(this)
+					.find(".dropdown")
+					.stop(true, true)
+					.delay(200)
+					.fadeOut();
+			}
+		);
+	}
+
+	function openSubMenuOnClick() {
+		$(".dropdown__toggle").click(function() {
+			$(this)
+				.parent()
+				.next(".dropdown")
+				.slideToggle();
+			$(this)
+				.closest("li")
+				.siblings("li")
+				.find(".dropdown")
+				.slideUp();
+		});
+	}
+
+	if ($(window).width() >= 1200) {
+		openSubMenuOnHover();
+	} else {
+		openSubMenuOnClick();
+	}
 
 	$("body").click(function() {
-		$(".menu__dropdown").slideUp();
+		$(".dropdown").slideUp();
 	});
 
 	$(".dropdown__toggle, .menu__dropdown").click(function(e) {
 		e.stopPropagation();
+	});
+
+	// open menu on mobile screen
+	$(".menu__btn").on("click", function() {
+		$(this).toggleClass("active");
+		$(".menu").toggleClass("open");
+		$(".dropdown").slideUp();
+		$("body").toggleClass("overflow-hidden");
 	});
 
 	// slider first screen
@@ -50,15 +88,7 @@ $(document).ready(function() {
 				arrows: false,
 				autoplaySpeed: 2000,
 				focusOnSelect: false,
-				speed: 1000,
-				responsive: [
-					{
-						breakpoint: 992,
-						settings: {
-							dots: false
-						}
-					}
-				]
+				speed: 1000
 			})
 			.on("beforeChange", function(event, slick, currentSlide, nextSlide) {
 				let findCurrentBlock = $(this).find(".current");
@@ -92,7 +122,7 @@ $(document).ready(function() {
 				speed: 1000,
 				responsive: [
 					{
-						breakpoint: 992,
+						breakpoint: 768,
 						settings: {
 							dots: false
 						}

@@ -99,9 +99,9 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 689px;
+		width: 43%;
 		height: 493px;
-		background: url(../../images/index/bg-about.svg) no-repeat center center/contain;
+		background: url(../../images/index/bg-about.svg) no-repeat top left/contain;
 	}
 	&__president {
 		position: relative;
@@ -151,7 +151,7 @@
 	}
 }
 
-@media only screen and (max-height: 850px) {
+@media only screen and (max-height: 850px) and (min-width: 1561px) {
 	.first-screen {
 		&__title {
 			margin-bottom: 54px;
@@ -183,7 +183,7 @@
 	}
 }
 
-@media only screen and (max-height: 760px) {
+@media only screen and (max-height: 760px) and (min-width: 1561px) {
 	.first-screen {
 		&__title {
 			margin-bottom: 44px;
@@ -221,14 +221,281 @@
 	}
 }
 
+@media only screen and (max-width: 1560px) {
+	.first-screen {
+		&__title {
+			font-size: $font-size-h2 - 14px;
+			margin-bottom: 34px;
+			&_white {
+				margin: 38px 0 0;
+			}
+		}
+		&__social-link {
+			left: 30px;
+			bottom: 36px;
+			.social-link__item {
+				margin-right: 26px;
+			}
+		}
+	}
+
+	.slider-first {
+		&__image-big {
+			width: 88%;
+		}
+		&__image-small {
+			width: 460px;
+			height: 460px;
+			border: 10px solid $border-gray;
+		}
+		.slick-dots {
+			left: 61%;
+			bottom: 30px;
+		}
+
+		.slick-counter {
+			bottom: 40px;
+			left: 57%;
+		}
+	}
+
+	.company {
+		&::before {
+			height: 378px;
+		}
+		&__info {
+			.link-all {
+				margin-top: 38px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1360px) {
+	.slider-first {
+		&__image-big {
+			width: 86%;
+		}
+	}
+}
+
 @media only screen and (max-width: 1199.8px) {
+	.first-screen {
+		height: 620px;
+		min-height: inherit;
+		&__title {
+			font-size: $font-size-h3;
+			line-height: $line-height-h3;
+		}
+		&__social-link {
+			bottom: 46px;
+			left: 20px;
+			.social-link__item {
+				margin-right: 20px;
+			}
+		}
+	}
+
+	.slider-first {
+		height: inherit;
+		min-height: inherit;
+		&__item {
+			height: 640px;
+			min-height: inherit;
+		}
+		&__image-big {
+			width: 89%;
+		}
+		&__image-small {
+			width: 400px;
+			height: 400px;
+		}
+		.slick-dots {
+			bottom: 50px;
+		}
+
+		.slick-counter {
+			bottom: 54px;
+			left: 56%;
+		}
+	}
+
+	.company {
+		padding: 80px 0;
+		&::before {
+			height: 278px;
+		}
+		&__info {
+			.link-all {
+				margin-top: 28px;
+			}
+		}
+	}
+
+	.capabilities {
+		padding: 80px 0;
+		&__info {
+			padding-right: 42px;
+			.link-all {
+				margin-top: 28px;
+			}
+		}
+		&__item {
+			font-size: $font-size-h4 - 6px;
+		}
+	}
 }
 
 @media only screen and (max-width: 991.8px) {
+	.first-screen {
+		height: 440px;
+		&__title {
+			font-size: $font-size-h4;
+			line-height: $line-height-h4;
+		}
+		&__social-link {
+			bottom: 26px;
+		}
+	}
+
+	.slider-first {
+		&__item {
+			height: 440px;
+		}
+		&__image-big {
+			width: 78%;
+		}
+		&__image-small {
+			width: 240px;
+			height: 240px;
+			border-width: 5px;
+		}
+		.slick-dots {
+			bottom: 30px;
+		}
+
+		.slick-counter {
+			bottom: 34px;
+			left: 54%;
+		}
+	}
+
+	.company {
+		padding: 50px 0;
+		&::before {
+			height: 230px;
+		}
+		&__info {
+			padding-left: 30px;
+			.link-all {
+				margin-top: 18px;
+			}
+		}
+	}
+
+	.capabilities {
+		padding: 50px 0;
+		&__info {
+			padding-right: 32px;
+			.link-all {
+				margin-top: 18px;
+			}
+		}
+		&__item {
+			font-size: $base-fs;
+		}
+	}
+
+	.map {
+		height: 280px;
+	}
 }
 
 @media only screen and (max-width: 767.8px) {
+	.first-screen {
+		height: 400px;
+		&__title {
+			font-size: 20px;
+			line-height: 120%;
+		}
+	}
+
+	.slider-first {
+		&__item {
+			height: 400px;
+		}
+		&__image-big {
+			width: 70%;
+		}
+		&__image-small {
+			display: none;
+		}
+	}
+
+	.company {
+		&::before {
+			height: 280px;
+			width: 55%;
+		}
+		&__president {
+			max-width: 360px;
+			margin: 0 auto 30px;
+		}
+		&__info {
+			padding-left: 50px;
+		}
+	}
+
+	.capabilities {
+		&__info {
+			padding-right: 0;
+			padding-left: 50px;
+		}
+		&__item {
+			margin-top: 30px;
+		}
+	}
+
+	.map {
+		height: 260px;
+	}
 }
 
 @media only screen and (max-width: 575.8px) {
+	.first-screen {
+		padding-top: 110px;
+		height: 380px;
+		.container {
+			height: auto;
+		}
+		&__title {
+			font-size: 18px;
+			margin-bottom: 30px;
+			margin-right: 15px;
+			&_white {
+				margin: 0 0 0 15px;
+			}
+		}
+		&__text {
+			display: flex;
+		}
+		&__social-link {
+			display: none;
+		}
+	}
+
+	.slider-first {
+		&__item {
+			height: 380px;
+		}
+		&__image-big {
+			width: 100%;
+		}
+		.slick-dots {
+			left: 50%;
+		}
+		.slick-counter {
+			left: 35%;
+		}
+	}
 }

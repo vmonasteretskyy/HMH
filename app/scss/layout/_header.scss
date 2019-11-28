@@ -11,63 +11,133 @@
 	width: 100%;
 	z-index: 100;
 	padding: 32px 0;
+	background-color: transparent;
 	@include transition(0.3s);
 	&__nav {
+		position: relative;
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
-	}
-	&__col {
-		width: 500px;
+		height: 48px;
 	}
 	&.fixed {
 		position: fixed;
 		padding: 16px 0;
 		background-color: $base-bg;
 		box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.04);
-		animation: move 0.6s ease;
-		.menu {
+		animation: move-header 0.6s ease;
+		.menu_white {
 			color: $text-dark;
+			.menu__item {
+				&::after {
+					background-color: $text-dark;
+				}
+				&:hover {
+					color: $base-text-color;
+				}
+			}
 		}
 		.phone-number {
 			border-color: $text-dark;
 			color: $text-dark;
+			> svg {
+				fill: $text-dark;
+			}
 		}
 	}
+	.logo {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		@include transform(translate(-50%, -50%));
+	}
 	.phone-number {
-		margin-left: 44px;
+		position: absolute;
+		top: 50%;
+		right: 15px;
+		@include transform(translateY(-50%));
 		width: 192px;
 		height: 45px;
+		line-height: normal;
 		border: 1px solid $text-dark;
 		@include radius(40px);
 		@extend %center-center;
+		> svg {
+			margin-right: 9px;
+			fill: $text-dark;
+		}
 	}
 }
 .index {
 	.menu_white {
 		color: $text-white;
+		.menu__item {
+			&::after {
+				background-color: $text-white;
+			}
+			&:hover {
+				color: $text-white;
+			}
+		}
 	}
 	.phone-number {
 		border-color: $base-bg;
 		color: $text-white;
+		> svg {
+			fill: $text-white;
+		}
 	}
 }
 
 .menu {
+	width: 100%;
 	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	color: $text-dark;
 	font-size: $base-fs;
 	line-height: 140%;
+	&__btn {
+		display: none;
+	}
+	&__col {
+		display: flex;
+		width: 500px;
+	}
 	&__item {
 		position: relative;
 		margin-right: 80px;
+		cursor: pointer;
 		&:last-of-type {
 			margin-right: 0;
 		}
-	}
-	a {
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			width: 0;
+			top: 100%;
+			height: 2px;
+			background-color: $text-dark;
+			@include transition(width 0.3s);
+		}
 		&:hover {
 			color: $base-text-color;
+			&:after {
+				width: 100%;
+			}
+		}
+	}
+	&__submenu {
+		display: flex;
+	}
+	&__dropdown {
+		display: flex;
+		> ul {
+			min-width: 190px;
+			margin-right: 45px;
+			&:last-of-type {
+				margin-right: 0;
+			}
 		}
 	}
 }
@@ -76,22 +146,14 @@
 	position: absolute;
 	top: 100%;
 	left: -11px;
-	width: 235px;
+	min-width: 180px;
 	padding: 16px 11px;
 	background: $base-bg;
 	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.04);
 	display: none;
 	&__toggle {
-		display: flex;
-		align-items: center;
-		&::after {
-			content: "";
-			display: block;
-			margin-left: 5px;
-			width: 12px;
-			height: 7px;
-			background: url(../../images/icons/arrow-dropdown.svg) no-repeat center center/contain;
-		}
+		display: block;
+		margin-left: 5px;
 	}
 	&__item {
 		margin-bottom: 13px;
@@ -101,31 +163,250 @@
 	}
 }
 
-@keyframes move {
+@keyframes move-header {
 	0% {
-		transform: translateY(-100%);
-		-webkit-transform: translateY(-100%);
-		-moz-transform: translateY(-100%);
-		-ms-transform: translateY(-100%);
-		-o-transform: translateY(-100%);
+		@include transform(translateY(-100%));
 	}
 	100% {
-		transform: translateY(0);
-		-webkit-transform: translateY(0);
-		-moz-transform: translateY(0);
-		-ms-transform: translateY(0);
-		-o-transform: translateY(0);
+		@include transform(translateY(0));
+	}
+}
+
+@media only screen and (max-width: 1560px) {
+	.header {
+		padding: 28px 0;
+		.phone-number {
+			width: 150px;
+			height: 40px;
+			font-size: $base-fs - 2px;
+		}
+		.logo {
+			width: 180px;
+			display: block;
+		}
+	}
+	.menu {
+		&__col {
+			width: 386px;
+		}
+		&__item {
+			margin-right: 30px;
+		}
 	}
 }
 
 @media only screen and (max-width: 1199.8px) {
+	.header {
+		padding: 24px 0;
+		&.fixed {
+			padding: 14px 0;
+		}
+		.phone-number {
+			width: 140px;
+			height: 35px;
+			font-size: $base-fs - 3px;
+			> svg {
+				width: 12px;
+				margin-right: 6px;
+			}
+		}
+		.logo {
+			width: 150px;
+			display: block;
+		}
+	}
+
+	.menu {
+		font-size: $base-fs - 2px;
+		&__col {
+			width: 350px;
+		}
+		&__item {
+			margin-right: 26px;
+			&::after {
+				height: 1px;
+			}
+		}
+		&__dropdown {
+			> ul {
+				min-width: 170px;
+				margin-right: 25px;
+			}
+		}
+	}
+
+	.dropdown {
+		min-width: 170px;
+	}
 }
 
 @media only screen and (max-width: 991.8px) {
+	.header {
+		padding: 14px 0;
+		&__nav {
+			justify-content: space-between;
+			height: 40px;
+		}
+		.phone-number {
+			position: static;
+			top: auto;
+			right: auto;
+			@include transform(translateY(0));
+			width: 150px;
+		}
+	}
+
+	.menu {
+		font-size: $base-fs - 2px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		text-align: center;
+		padding: 46px 0 20px;
+		width: 260px;
+		display: block;
+		background-color: $base-bg;
+		opacity: 0;
+		font-size: $base-fs;
+		@include transform(translateX(-100%));
+		@include transition(0.5s ease);
+		max-height: calc(100vh - 20px);
+		overflow-y: auto;
+		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+		&.open {
+			opacity: 1;
+			@include transform(translateX(0));
+		}
+		&__btn {
+			display: block;
+			position: relative;
+			height: 24px;
+			width: 24px;
+			background: transparent;
+			cursor: pointer;
+			padding: 0;
+			z-index: 100;
+			> span {
+				display: block;
+				position: absolute;
+				top: 50%;
+				margin-top: -1.5px;
+				left: 0;
+				width: 100%;
+				height: 3px;
+				background-color: $button-black;
+				&::after,
+				&::before {
+					content: "";
+					display: block;
+					position: absolute;
+					top: 50%;
+					margin-top: -2px;
+					left: 0;
+					width: 100%;
+					height: 3px;
+					background-color: $button-black;
+					@include transition(transform 0.4s);
+				}
+				&::after {
+					@include transform(translateY(-6px));
+				}
+				&::before {
+					@include transform(translateY(7px));
+				}
+			}
+			&.active {
+				> span {
+					height: 0;
+					&::after {
+						@include transform(rotate(-42deg));
+					}
+					&::before {
+						@include transform(rotate(42deg));
+					}
+				}
+			}
+		}
+		&__col {
+			display: block;
+			width: auto;
+		}
+		&__item {
+			margin-right: 0;
+			margin-bottom: 14px;
+			&::after {
+				display: none;
+			}
+		}
+		&__submenu {
+			display: flex;
+			justify-content: center;
+		}
+		&__dropdown {
+			display: block;
+			> ul {
+				min-width: inherit;
+				margin-right: 0;
+				margin-bottom: 13px;
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.dropdown {
+		position: static;
+		top: auto;
+		left: auto;
+		min-width: 100%;
+		padding: 16px 11px 6px;
+		background: $base-bg;
+		box-shadow: none;
+		display: none;
+		opacity: 0.6;
+		&__item {
+			margin-bottom: 13px;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.index {
+		.menu_white {
+			color: $text-dark;
+			.menu__item {
+				&::after {
+					background-color: $text-dark;
+				}
+				&:hover {
+					color: $base-text-color;
+				}
+			}
+		}
+	}
 }
 
 @media only screen and (max-width: 767.8px) {
+	.header {
+		.container {
+			max-width: 100%;
+		}
+	}
 }
 
 @media only screen and (max-width: 575.8px) {
+	.header {
+		.logo {
+			left: 60px;
+			width: 110px;
+			@include transform(translate(0, -50%));
+		}
+		.phone-number {
+			width: 120px;
+			font-size: 12px;
+			height: 30px;
+		}
+	}
 }

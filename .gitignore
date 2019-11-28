@@ -1,6 +1,3 @@
 /node_modules
 
 /dist
-
-#DNX
-project.lock.json
