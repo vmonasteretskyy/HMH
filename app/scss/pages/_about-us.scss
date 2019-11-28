@@ -1,6 +1,6 @@
 .about-us {
 	padding-top: 224px;
-	background: url(../../images/about-us/bg-about-us.jpg) no-repeat center center/cover;
+	background: url(../images/about-us/bg-about-us.jpg) no-repeat center center/cover;
 	width: 100%;
 	height: 560px;
 	color: $text-white;
@@ -12,7 +12,7 @@
 	&::before {
 		content: "";
 		display: block;
-		background: url(../../images/about-us/bg-our-company.svg) no-repeat top left/cover;
+		background: url(../images/about-us/bg-our-company.svg) no-repeat top left/cover;
 		width: 62.5%;
 		height: 473px;
 		position: absolute;
@@ -85,7 +85,7 @@
 
 .slider-gallery {
 	position: relative;
-	background: url(../../images/gallery/bg-gallery.svg) no-repeat center top;
+	background: url(../images/gallery/bg-gallery.svg) no-repeat center top;
 	padding-top: 122px;
 	margin-bottom: 162px;
 	&__item {

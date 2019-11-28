@@ -415,7 +415,7 @@ h1, h2, h3, h4, h5, h6 { font-family: "Akrobat", sans-serif; font-weight: 600; }
   .footer__menu { margin-top: 20px; text-align: center; }
   .footer__menu li { margin-bottom: 14px; } }
 
-.section-gray { padding: 124px 0 0; background: url(../../images/bg-gray.svg) no-repeat top center/1920px; }
+.section-gray { padding: 124px 0 0; background: url(../images/bg-gray.svg) no-repeat top center/1920px; }
 
 .slider-category { position: relative; }
 
@@ -540,7 +540,7 @@ h1, h2, h3, h4, h5, h6 { font-family: "Akrobat", sans-serif; font-weight: 600; }
 
 .company { position: relative; padding: 160px 0; }
 
-.company::before { content: ""; position: absolute; top: 0; left: 0; width: 43%; height: 493px; background: url(../../images/index/bg-about.svg) no-repeat top left/contain; }
+.company::before { content: ""; position: absolute; top: 0; left: 0; width: 43%; height: 493px; background: url(../images/index/bg-about.svg) no-repeat top left/contain; }
 
 .company__president { position: relative; width: 100%; }
 
@@ -656,11 +656,11 @@ h1, h2, h3, h4, h5, h6 { font-family: "Akrobat", sans-serif; font-weight: 600; }
   .slider-first .slick-dots { left: 50%; }
   .slider-first .slick-counter { left: 35%; } }
 
-.about-us { padding-top: 224px; background: url(../../images/about-us/bg-about-us.jpg) no-repeat center center/cover; width: 100%; height: 560px; color: #fff; }
+.about-us { padding-top: 224px; background: url(../images/about-us/bg-about-us.jpg) no-repeat center center/cover; width: 100%; height: 560px; color: #fff; }
 
 .our-company { position: relative; margin-top: 106px; }
 
-.our-company::before { content: ""; display: block; background: url(../../images/about-us/bg-our-company.svg) no-repeat top left/cover; width: 62.5%; height: 473px; position: absolute; top: -166px; right: 0; }
+.our-company::before { content: ""; display: block; background: url(../images/about-us/bg-our-company.svg) no-repeat top left/cover; width: 62.5%; height: 473px; position: absolute; top: -166px; right: 0; }
 
 .our-company__info p { margin-bottom: 24px; }
 
@@ -690,7 +690,7 @@ h1, h2, h3, h4, h5, h6 { font-family: "Akrobat", sans-serif; font-weight: 600; }
 
 .our-team__info p:last-of-type { margin-bottom: 0; }
 
-.slider-gallery { position: relative; background: url(../../images/gallery/bg-gallery.svg) no-repeat center top; padding-top: 122px; margin-bottom: 162px; }
+.slider-gallery { position: relative; background: url(../images/gallery/bg-gallery.svg) no-repeat center top; padding-top: 122px; margin-bottom: 162px; }
 
 .slider-gallery__item { position: relative; width: 100%; }
 
