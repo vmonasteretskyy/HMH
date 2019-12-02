@@ -132,9 +132,6 @@
 	}
 	&__info {
 		position: relative;
-		.link-all {
-			margin-top: 48px;
-		}
 	}
 }
 
@@ -142,9 +139,6 @@
 	padding: 160px 0;
 	&__info {
 		padding-right: 92px;
-		.link-all {
-			margin-top: 48px;
-		}
 	}
 	&__list {
 		justify-content: space-between;
@@ -289,11 +283,6 @@
 		&::before {
 			height: 378px;
 		}
-		&__info {
-			.link-all {
-				margin-top: 38px;
-			}
-		}
 	}
 }
 
@@ -307,7 +296,7 @@
 
 @media only screen and (max-width: 1199.8px) {
 	.first-screen {
-		height: 620px;
+		height: 640px;
 		min-height: inherit;
 		&__title {
 			font-size: $font-size-h3;
@@ -354,20 +343,12 @@
 		&::before {
 			height: 278px;
 		}
-		&__info {
-			.link-all {
-				margin-top: 28px;
-			}
-		}
 	}
 
 	.capabilities {
 		padding: 80px 0;
 		&__info {
 			padding-right: 42px;
-			.link-all {
-				margin-top: 28px;
-			}
 		}
 		&__item {
 			font-size: $font-size-h4 - 6px;
@@ -416,9 +397,6 @@
 		}
 		&__info {
 			padding-left: 30px;
-			.link-all {
-				margin-top: 18px;
-			}
 		}
 	}
 
@@ -426,9 +404,6 @@
 		padding: 50px 0;
 		&__info {
 			padding-right: 32px;
-			.link-all {
-				margin-top: 18px;
-			}
 		}
 		&__item {
 			font-size: $base-fs;

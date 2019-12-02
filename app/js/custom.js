@@ -67,8 +67,7 @@ $(document).ready(function() {
 		$("body").toggleClass("overflow-hidden");
 	});
 
-	// scrooll to section
-	// scroll section
+	// scroll to section
 	let scrollLink = $(".scroll-down");
 	scrollLink.click(function(e) {
 		e.preventDefault();
@@ -173,11 +172,41 @@ $(document).ready(function() {
 				responsive: [
 					{
 						breakpoint: 992,
-						settings: {
-							dots: false
-						}
+						settings: { adaptiveHeight: true }
+					},
+					{
+						breakpoint: 576,
+						settings: { adaptiveHeight: true, arrows: false }
 					}
 				]
+			})
+			.on("beforeChange", function(event, slick, currentSlide, nextSlide) {
+				let findCurrentBlock = $(this).find(".current");
+				findCurrentBlock.text(nextSlide + 1);
+			});
+	});
+
+	// slider .slider three image
+	$(function() {
+		$(".slider-three-pics")
+			.on("init", function(event, slick) {
+				$(this).append(
+					'<div class="slick-counter"><span class="current"></span><span class="total"></span></div>'
+				);
+				let findBlock = $(this).find(".total");
+				let findCurrentBlock = $(this).find(".current");
+				findCurrentBlock.text(slick.currentSlide + 1);
+				findBlock.text(slick.slideCount);
+			})
+			.slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				// autoplay: true,
+				dots: true,
+				arrows: false,
+				autoplaySpeed: 2000,
+				focusOnSelect: false,
+				speed: 1000
 			})
 			.on("beforeChange", function(event, slick, currentSlide, nextSlide) {
 				let findCurrentBlock = $(this).find(".current");

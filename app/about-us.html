@@ -14,16 +14,91 @@
     <!-- style -->
     <link rel="stylesheet" type="text/css" href="css/components/bootstrap-reboot.min.css">
     <link rel="stylesheet" type="text/css" href="css/components/bootstrap-grid.min.css">
+    <link rel="stylesheet" type="text/css" href="css/components/animate.css">
 
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
-<body>
+<body class="page-about-us">
     <header class="header">
-        <div class="container">
-            <div class="row">
-
-            </div>
+        <div class="container header__nav">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="" class="logo_black">
+                <img src="images/logo-white.png" alt="" class="logo_white">
+            </a>
+            <button type="button" class="menu__btn">
+                <span></span>
+            </button>
+            <nav class="menu">
+                <ul class="menu__col">
+                    <li class="menu__item">
+                        <div class="menu__submenu">
+                            <a href="#">Projects</a>
+                            <span class="dropdown__toggle">
+                                <svg width="12" height="6" viewBox="0 0 12 6" fill="#312E2E"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 6L0.803848 0.75H11.1962L6 6Z" />
+                                </svg>
+                            </span>
+                        </div>
+                        <ul class="menu__dropdown dropdown">
+                            <li class="dropdown__item"><a href="#">Metal</a></li>
+                            <li class="dropdown__item"><a href="#">Glass</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__item">
+                        <div class="menu__submenu">
+                            Services
+                            <span class="dropdown__toggle">
+                                <svg width="12" height="6" viewBox="0 0 12 6" fill="#312E2E"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 6L0.803848 0.75H11.1962L6 6Z" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="dropdown">
+                            <div class="menu__dropdown">
+                                <ul>
+                                    <li class="dropdown__item"><a href="#">Rolling</a></li>
+                                    <li class="dropdown__item"><a href="#">Cladding</a></li>
+                                    <li class="dropdown__item"><a href="#">Engraving</a></li>
+                                    <li class="dropdown__item"><a href="#">Machine and miliings</a></li>
+                                    <li class="dropdown__item"><a href="#">Laser cutting</a></li>
+                                    <li class="dropdown__item"><a href="#">Punch-press</a></li>
+                                    <li class="dropdown__item"><a href="#">Welding</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="dropdown__item"><a href="#">Polishing</a></li>
+                                    <li class="dropdown__item"><a href="#">Press break</a></li>
+                                    <li class="dropdown__item"><a href="#">Water-jet cutting</a></li>
+                                    <li class="dropdown__item"><a href="#">Grills</a></li>
+                                    <li class="dropdown__item"><a href="#">Wrought</a></li>
+                                    <li class="dropdown__item"><a href="#">Materials</a></li>
+                                    <li class="dropdown__item"><a href="#">Coatings & finishing</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#">Information</a>
+                    </li>
+                </ul>
+                <ul class="menu__col menu_white">
+                    <li class="menu__item">
+                        <a href="#">About Us</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="tel:" class="phone-number">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M14.21 11.3392L14.1409 11.1231C13.9787 10.6261 13.4441 10.1076 12.9516 9.96864L11.1331 9.45777C10.6406 9.32043 9.9378 9.50563 9.57596 9.87757L8.91821 10.5536C6.52758 9.88838 4.65202 7.96073 4.00628 5.50368L4.66403 4.82766C5.02443 4.45726 5.20463 3.73496 5.07099 3.2272L4.57537 1.35817C4.44174 0.851946 3.93416 0.302506 3.45065 0.135822L3.24339 0.0648023C2.75835 -0.101882 2.06609 0.0663331 1.7057 0.438322L0.720611 1.45077C0.544929 1.6298 0.432293 2.14373 0.432293 2.14531C0.399232 5.35863 1.62463 8.45308 3.83507 10.7264C6.0395 12.9921 9.03984 14.25 12.1557 14.2222C12.1723 14.2222 12.6873 14.1095 12.863 13.9289L13.8481 12.9165C14.2085 12.5476 14.3706 11.8361 14.21 11.3392Z" />
+                </svg>
+                718-851-5870
+            </a>
         </div>
     </header>
 
@@ -34,6 +109,7 @@
                 <p>read about our company</p>
             </div>
         </section>
+
         <div class="breadcrumb">
             <div class="container">
                 <nav>
@@ -48,7 +124,7 @@
         <section class="our-company">
             <div class="container">
                 <div class="row justify-content-between">
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-lg-6">
                         <div class="our-company__info">
                             <h2 class="title-section">our company</h2>
                             <p>We specialize in architectural and ornamental metal work using a wide range of metals and
@@ -66,7 +142,7 @@
                                 inception of the creative process.</p>
                         </div>
                     </div>
-                    <div class="col-12 col-md-5 col-lg-4">
+                    <div class="col-12 col-lg-6 col-lg-5">
                         <div class="our-company__time-line">
                             <div class="our-company__item">
                                 <div class="our-company__icon">
@@ -129,7 +205,7 @@
         <section class="our-team">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-lg-5">
                         <div class="our-team__info">
                             <h2 class="title-section">our team</h2>
                             <p>HMH was built upon the core belief that every customer deserves the best personalized
@@ -141,11 +217,79 @@
                                 and every client.</p>
                         </div>
                     </div>
-                    <div class="col-12 col-md-5 offset-lg-1">
-                        <a href="#" class="image our-team__image">
-                            <img src="images/about-us/image.jpg" alt="">
-                            <div class="image__desc image__desc_right">HMH team <small>2019</small></div>
-                        </a>
+                </div>
+            </div>
+            <div class="slider-three-pics">
+                <div class="slider-three-pics__item">
+                    <div class="slider-three-pics__big">
+                        <div class="image-box">
+                            <img src="images/about-us/image-1.jpg" alt="">
+                            <span>Team Building Event</span>
+                        </div>
+                    </div>
+                    <div class="slider-three-pics__small">
+                        <div class="image-box">
+                            <img src="images/about-us/image-2.jpg" alt="">
+                            <span>Team Building Event</span>
+                        </div>
+                        <div class="image-box">
+                            <img src="images/about-us/image-3.jpg" alt="">
+                            <span>Team Building Event</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-three-pics__item">
+                    <div class="slider-three-pics__big">
+                        <div class="image-box">
+                            <img src="images/about-us/image-1.jpg" alt="">
+                            <span>Team Building Event</span>
+                        </div>
+                    </div>
+                    <div class="slider-three-pics__small">
+                        <div class="image-box">
+                            <img src="images/about-us/image-2.jpg" alt="">
+                            <span>Team Building Event</span>
+                        </div>
+                        <div class="image-box">
+                            <img src="images/about-us/image-3.jpg" alt="">
+                            <span>Team Building Event</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-three-pics__item">
+                    <div class="slider-three-pics__big">
+                        <div class="image-box">
+                            <img src="images/about-us/image-1.jpg" alt="">
+                            <span>Team Building Event</span>
+                        </div>
+                    </div>
+                    <div class="slider-three-pics__small">
+                        <div class="image-box">
+                            <img src="images/about-us/image-2.jpg" alt="">
+                            <span>Team Building Event</span>
+                        </div>
+                        <div class="image-box">
+                            <img src="images/about-us/image-3.jpg" alt="">
+                            <span>Team Building Event</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-three-pics__item">
+                    <div class="slider-three-pics__big">
+                        <div class="image-box">
+                            <img src="images/about-us/image-1.jpg" alt="">
+                            <span>Team Building Event</span>
+                        </div>
+                    </div>
+                    <div class="slider-three-pics__small">
+                        <div class="image-box">
+                            <img src="images/about-us/image-2.jpg" alt="">
+                            <span>Team Building Event</span>
+                        </div>
+                        <div class="image-box">
+                            <img src="images/about-us/image-3.jpg" alt="">
+                            <span>Team Building Event</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -155,23 +299,26 @@
             <div class="slider-gallery__item">
                 <div class="container">
                     <div class="row justify-content-end">
-                        <div class="col-12 col-md-4">
+                        <div class="col-12 col-lg-4">
                             <div class="slider-gallery__info">
                                 <h2 class="title-section">gallery</h2>
-                                <p>Text description of the gallery. What you offer.</p>
+                                <p>Text description of the gallery. What you offer.Text description of the gallery. What
+                                    you offer.Text description of the gallery. What you offer.Text description of the
+                                    gallery. What you offer.Text description of the gallery. What you offer.Text
+                                    description of the gallery. What you offer.Text description of the gallery. What you
+                                    offer.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="image slider-gallery__img">
+                <div class="slider-gallery__img">
                     <img src="images/gallery/image.jpg" alt="">
-                    <div class="image__desc image__desc_left"></div>
                 </div>
             </div>
             <div class="slider-gallery__item">
                 <div class="container">
                     <div class="row justify-content-end">
-                        <div class="col-12 col-md-4">
+                        <div class="col-12 col-lg-4">
                             <div class="slider-gallery__info">
                                 <h2 class="title-section">gallery</h2>
                                 <p>Text description of the gallery. What you offer.</p>
@@ -179,15 +326,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="image slider-gallery__img">
+                <div class="slider-gallery__img">
                     <img src="images/gallery/image.jpg" alt="">
-                    <div class="image__desc image__desc_left"></div>
                 </div>
             </div>
             <div class="slider-gallery__item">
                 <div class="container">
                     <div class="row justify-content-end">
-                        <div class="col-12 col-md-4">
+                        <div class="col-12 col-lg-4">
                             <div class="slider-gallery__info">
                                 <h2 class="title-section">gallery</h2>
                                 <p>Text description of the gallery. What you offer.</p>
@@ -195,15 +341,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="image slider-gallery__img">
+                <div class="slider-gallery__img">
                     <img src="images/gallery/image.jpg" alt="">
-                    <div class="image__desc image__desc_left"></div>
                 </div>
             </div>
             <div class="slider-gallery__item">
                 <div class="container">
                     <div class="row justify-content-end">
-                        <div class="col-12 col-md-4">
+                        <div class="col-12 col-lg-4">
                             <div class="slider-gallery__info">
                                 <h2 class="title-section">gallery</h2>
                                 <p>Text description of the gallery. What you offer.</p>
@@ -211,9 +356,102 @@
                         </div>
                     </div>
                 </div>
-                <div class="image slider-gallery__img">
+                <div class="slider-gallery__img">
                     <img src="images/gallery/image.jpg" alt="">
-                    <div class="image__desc image__desc_left"></div>
+                </div>
+            </div>
+            <div class="slider-gallery__item">
+                <div class="container">
+                    <div class="row justify-content-end">
+                        <div class="col-12 col-lg-4">
+                            <div class="slider-gallery__info">
+                                <h2 class="title-section">gallery</h2>
+                                <p>Text description of the gallery. What you offer.Text description of the gallery. What
+                                    you offer.Text description of the gallery. What you offer.Text description of the
+                                    gallery. What you offer.Text description of the gallery. What you offer.Text
+                                    description of the gallery. What you offer.Text description of the gallery. What you
+                                    offer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-gallery__img">
+                    <img src="images/gallery/image.jpg" alt="">
+                </div>
+            </div>
+            <div class="slider-gallery__item">
+                <div class="container">
+                    <div class="row justify-content-end">
+                        <div class="col-12 col-lg-4">
+                            <div class="slider-gallery__info">
+                                <h2 class="title-section">gallery</h2>
+                                <p>Text description of the gallery. What you offer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-gallery__img">
+                    <img src="images/gallery/image.jpg" alt="">
+                </div>
+            </div>
+            <div class="slider-gallery__item">
+                <div class="container">
+                    <div class="row justify-content-end">
+                        <div class="col-12 col-lg-4">
+                            <div class="slider-gallery__info">
+                                <h2 class="title-section">gallery</h2>
+                                <p>Text description of the gallery. What you offer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-gallery__img">
+                    <img src="images/gallery/image.jpg" alt="">
+                </div>
+            </div>
+            <div class="slider-gallery__item">
+                <div class="container">
+                    <div class="row justify-content-end">
+                        <div class="col-12 col-lg-4">
+                            <div class="slider-gallery__info">
+                                <h2 class="title-section">gallery</h2>
+                                <p>Text description of the gallery. What you offer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-gallery__img">
+                    <img src="images/gallery/image.jpg" alt="">
+                </div>
+            </div>
+            <div class="slider-gallery__item">
+                <div class="container">
+                    <div class="row justify-content-end">
+                        <div class="col-12 col-lg-4">
+                            <div class="slider-gallery__info">
+                                <h2 class="title-section">gallery</h2>
+                                <p>Text description of the gallery. What you offer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-gallery__img">
+                    <img src="images/gallery/image.jpg" alt="">
+                </div>
+            </div>
+            <div class="slider-gallery__item">
+                <div class="container">
+                    <div class="row justify-content-end">
+                        <div class="col-12 col-lg-4">
+                            <div class="slider-gallery__info">
+                                <h2 class="title-section">gallery</h2>
+                                <p>Text description of the gallery. What you offer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-gallery__img">
+                    <img src="images/gallery/image.jpg" alt="">
                 </div>
             </div>
             <button class="circle-white slider-gallery-next">
@@ -229,6 +467,66 @@
             <div class="line"></div>
         </section>
 
+        <section class="section-news">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-12 col-lg-5">
+                        <div class="section-news__info">
+                            <h2 class="title-section">NEWS</h2>
+                            <div class="subtitle subtitle_right">
+                                <h3>what`s new</h3>
+                                <span class="line"></span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                            <a href="#" class="link-all">
+                                <span class="circle-white">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="#312E2E"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M5.54995 0L3.44995 2.1L10.35 9L3.44995 15.9L5.54995 18L14.55 9L5.54995 0Z" />
+                                    </svg>
+                                </span>
+                                view all
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                        <div class="news d-flex">
+                            <a href="#" class="news__img">
+                                <img src="images/news/image-2.jpg" alt="">
+                            </a>
+                            <div class="news__desc">
+                                <a href="#" class="news__title">Wanted: Energetic, Creative and Aggressive Manager.</a>
+                                <span class="news__info">
+                                    <time>October 20, 2019</time>
+                                    by Steve Hasenfeld
+                                </span>
+                                <p class="news__text">Mattis ullamcorper velit sed ullamcorper morbi. Congue eu
+                                    consequat ac felis. Laoreet sit amet cursus sit amet dictum sit amet justo. Purus
+                                    sit ame...</p>
+                            </div>
+                        </div>
+                        <div class="news d-flex">
+                            <a href="#" class="news__img">
+                                <img src="images/news/image-1.jpg" alt="">
+                            </a>
+                            <div class="news__desc">
+                                <a href="#" class="news__title">HMH completed project at "1 Hotel"</a>
+                                <span class="news__info">
+                                    <time>October 20, 2019</time>
+                                    by Steve Hasenfeld
+                                </span>
+                                <p class="news__text">Mattis ullamcorper velit sed ullamcorper morbi. Congue eu
+                                    consequat ac felis. Laoreet sit amet cursus sit amet dictum sit amet justo. Purus
+                                    sit amet volutpat consequat. Quisque id diam vel pulv Matti...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="map">
             <img src="images/map.png" alt="">
         </section>
@@ -236,8 +534,8 @@
 
     <footer class="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-12 col-lg-3">
+            <div class="row justify-content-md-between justify-content-xl-around">
+                <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                     <div class="footer__contacts">
                         <img src="images/icons/map-marker.svg" alt="">
                         <p>53 9th Street, Brooklyn, New York, USA, 11215</p>
@@ -251,27 +549,18 @@
                         <a href="email:info@hmhirondesign.com">info@hmhirondesign.com</a>
                     </div>
                 </div>
-                <div class="col-12 col-lg-2">
+                <div class="col-12 col-sm-6 col-md-2 col-xl-2">
                     <nav>
                         <ul class="footer__menu">
-                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Projects</a></li>
+                            <li><a href="#">Services</a></li>
                             <li><a href="#">Information</a></li>
-                            <li><a href="#">Our projects</a></li>
-                            <li><a href="#">Catalog</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-12 col-lg-3">
-                    <nav>
-                        <ul class="footer__menu">
-                            <li><a href="#">Capabilities</a></li>
-                            <li><a href="#">For architects and designers</a></li>
-                            <li><a href="#">For construction companies</a></li>
+                            <li><a href="about-us.html">About us</a></li>
                             <li><a href="#">Contacts</a></li>
                         </ul>
                     </nav>
                 </div>
-                <div class="col-12 col-lg-3 offset-lg-1">
+                <div class="col-12 col-md-4 col-xl-3">
                     <p class="footer__text">Have a question or project idea? Feel free to contact us!</p>
                     <a href="#" class="btn btn-white">Send message</a>
                 </div>
@@ -298,6 +587,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-1.4.1.min.js"></script>
     <script src="js/components/slick.min.js"></script>
+    <script src="js/components/wow.min.js"></script>
     <script src="js/custom.js"></script>
 </body>
 

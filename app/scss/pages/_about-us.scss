@@ -30,11 +30,12 @@
 	&__time-line {
 		position: relative;
 		margin-top: 144px;
+		padding-left: 128px;
 		.subtitle {
 			top: -20px;
 			bottom: -9%;
 			&_left {
-				left: -82px;
+				left: 44px;
 			}
 		}
 	}
@@ -69,10 +70,8 @@
 }
 
 .our-team {
+	position: relative;
 	padding: 122px 0 160px;
-	&__image {
-		display: flex;
-	}
 	&__info {
 		p {
 			margin-bottom: 24px;
@@ -80,6 +79,12 @@
 				margin-bottom: 0;
 			}
 		}
+	}
+	.slider-three-pics {
+		position: absolute;
+		top: 50px;
+		right: 0;
+		width: 56%;
 	}
 }
 
@@ -106,9 +111,32 @@
 			height: 100%;
 			object-fit: cover;
 		}
-		.image__desc {
-			width: 304px;
+	}
+	&__info {
+		p {
+			max-height: 226px;
+			overflow: hidden;
 		}
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 304px;
+		height: 96px;
+		background-color: $base-bg;
+		z-index: 1;
+	}
+	&::after {
+		content: "";
+		width: 223px;
+		border-top: 1px solid #c4c4c4;
+		position: absolute;
+		bottom: 0;
+		left: 40px;
+		animation: line 2s;
+		z-index: 1;
 	}
 	.slick-dots {
 		left: 114px;
@@ -135,5 +163,378 @@
 		right: 0;
 		width: 35.5%;
 		border-top: 1px solid #c4c4c4;
+	}
+}
+
+.section-news {
+	padding-bottom: 160px;
+	.subtitle {
+		top: 0;
+		bottom: 10%;
+	}
+	&__info {
+		padding-right: 128px;
+	}
+}
+
+@media only screen and (max-width: 1560px) {
+	.our-company {
+		&::before {
+			width: 69%;
+		}
+		&__time-line {
+			padding-left: 28px;
+			.subtitle {
+				&_left {
+					left: -20px;
+				}
+			}
+		}
+	}
+
+	.our-team {
+		.slider-three-pics {
+			top: 100px;
+		}
+	}
+
+	.slider-gallery {
+		&__img {
+			width: 62%;
+			height: 540px;
+		}
+		&__info {
+			p {
+				max-height: 226px;
+				overflow: hidden;
+			}
+		}
+		.slider-gallery-next,
+		.slider-gallery-prev {
+			bottom: 78px;
+		}
+	}
+
+	.section-news {
+		.subtitle {
+			&_right {
+				right: 20px;
+			}
+		}
+		&__info {
+			padding-right: 48px;
+		}
+	}
+}
+
+@media only screen and (max-width: 1440px) {
+	.slider-gallery {
+		.slider-gallery-next,
+		.slider-gallery-prev {
+			left: 65%;
+		}
+		.slider-gallery-next {
+			left: 71%;
+		}
+	}
+}
+
+@media only screen and (max-width: 1199.8px) {
+	.about-us {
+		padding-top: 200px;
+		height: 500px;
+	}
+
+	.our-company {
+		margin-top: 80px;
+		&::before {
+			width: 72%;
+			height: 364px;
+			position: absolute;
+			top: -131px;
+			right: 0;
+		}
+		&__info {
+			p {
+				margin-bottom: 18px;
+			}
+		}
+		&__time-line {
+			margin-top: 100px;
+			padding-left: 0;
+			.subtitle {
+				&_left {
+					left: -30px;
+				}
+			}
+		}
+		&__item {
+			margin-bottom: 20px;
+		}
+		&__icon {
+			margin-right: 16px;
+			width: 120px;
+			height: 120px;
+			font-size: $font-size-h4 - 4px;
+			> svg {
+				width: inherit;
+				height: inherit;
+			}
+		}
+		&__text {
+			h4 {
+				font-size: $font-size-h4 - 4px;
+			}
+		}
+	}
+
+	.our-team {
+		padding: 80px 0 100px;
+		&__info {
+			p {
+				margin-bottom: 18px;
+			}
+		}
+		.slider-three-pics {
+			top: 60px;
+		}
+	}
+
+	.slider-gallery {
+		background-size: contain;
+		padding-top: 80px;
+		margin-bottom: 100px;
+		&__img {
+			height: 380px;
+		}
+		&::before {
+			height: 64px;
+		}
+		.slick-dots {
+			bottom: 16px;
+		}
+
+		.slick-counter {
+			bottom: 20px;
+		}
+
+		.slider-gallery-next,
+		.slider-gallery-prev {
+			position: absolute;
+			left: 67%;
+			bottom: 10px;
+		}
+		.slider-gallery-next {
+			left: 74%;
+		}
+	}
+
+	.section-news {
+		padding-bottom: 80px;
+	}
+}
+
+@media only screen and (max-width: 991.8px) {
+	.about-us {
+		padding-top: 160px;
+		height: 400px;
+	}
+
+	.our-company {
+		&::before {
+			display: none;
+		}
+		&__time-line {
+			margin-top: 40px;
+			padding-left: 60px;
+			.subtitle {
+				top: 0;
+				bottom: 0;
+				&_left {
+					left: 20px;
+				}
+			}
+		}
+		&__item {
+			&:first-of-type {
+				svg {
+					rect {
+						stroke: #f5f5f5;
+					}
+				}
+			}
+		}
+	}
+
+	.our-team {
+		.slider-three-pics {
+			position: relative;
+			top: auto;
+			right: auto;
+			margin: 40px auto 0;
+			width: 690px;
+		}
+	}
+
+	.slider-gallery {
+		padding: 0;
+		margin: 0 auto 60px;
+		background: transparent;
+		width: 690px;
+		&__item {
+			.container {
+				padding: 0;
+				position: relative;
+				top: auto;
+				left: auto;
+				@include transform(translateX(0));
+			}
+		}
+		&__img {
+			width: 100%;
+			margin-top: 20px;
+		}
+
+		.slider-gallery-next,
+		.slider-gallery-prev {
+			position: absolute;
+			left: auto;
+			right: 70px;
+			z-index: 10;
+		}
+		.slider-gallery-next {
+			right: 10px;
+			left: auto;
+		}
+		.line {
+			display: none;
+		}
+	}
+
+	.section-news {
+		.subtitle {
+			top: -10%;
+			bottom: 20px;
+			&_right {
+				right: auto;
+				left: 40px;
+			}
+		}
+		&__info {
+			padding-right: 0;
+			padding-left: 60px;
+			margin-bottom: 50px;
+		}
+	}
+}
+
+@media only screen and (max-width: 767.8px) {
+	.our-company {
+		margin-top: 40px;
+		&__time-line {
+			padding-left: 50px;
+		}
+		&__icon {
+			font-size: $base-fs + 2px;
+		}
+		&__text {
+			h4 {
+				font-size: $base-fs;
+			}
+		}
+	}
+
+	.our-team {
+		padding: 40px 0 60px;
+		.slider-three-pics {
+			width: 510px;
+		}
+	}
+
+	.slider-gallery {
+		width: 510px;
+		&__img {
+			height: 310px;
+		}
+	}
+
+	.section-news {
+		padding: 40px 0;
+		.subtitle {
+			top: 0;
+		}
+		&__info {
+			padding-left: 50px;
+			margin-bottom: 40px;
+		}
+	}
+}
+
+@media only screen and (max-width: 575.8px) {
+	.our-company {
+		margin-top: 40px;
+		&__time-line {
+			padding-left: 40px;
+		}
+		&__icon {
+			width: 100px;
+			height: 100px;
+			font-size: $base-fs;
+		}
+	}
+
+	.our-team {
+		padding: 40px 0 60px;
+		.slider-three-pics {
+			width: 100%;
+			padding: 0 15px 50px;
+		}
+	}
+
+	.slider-gallery {
+		width: 100%;
+		padding: 0 15px;
+		&__img {
+			height: 310px;
+		}
+		&::before {
+			width: 280px;
+			height: 50px;
+		}
+		&::after {
+			width: 212px;
+		}
+		.slider-gallery-next,
+		.slider-gallery-prev {
+			display: none;
+		}
+		.slick-dots {
+			bottom: 8px;
+			left: 104px;
+		}
+		.slick-counter {
+			bottom: 14px;
+			left: 54px;
+		}
+	}
+
+	.section-news {
+		.subtitle {
+			&_right {
+				right: auto;
+				left: 30px;
+			}
+		}
+		&__info {
+			padding-left: 40px;
+		}
+	}
+}
+
+@media only screen and (max-width: 430px) {
+	.slider-gallery {
+		&__img {
+			height: 220px;
+		}
 	}
 }
