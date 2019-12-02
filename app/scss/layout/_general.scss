@@ -283,7 +283,8 @@ h6 {
 }
 
 .breadcrumb {
-	margin: 32px 0 40px;
+	padding-top: 32px;
+	margin-bottom: 40px;
 	&__list {
 		display: flex;
 		font-size: $base-fs - 2px;
@@ -419,7 +420,8 @@ h6 {
 	}
 
 	.breadcrumb {
-		margin: 26px 0 30px;
+		padding-top: 26px;
+		margin-bottom: 30px;
 	}
 }
 

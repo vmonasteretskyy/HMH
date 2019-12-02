@@ -4,15 +4,13 @@
 ================================================================================
 */
 .header {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
+	position: relative;
 	width: 100%;
 	z-index: 100;
 	padding: 32px 0;
 	background-color: transparent;
 	@include transition(0.3s);
+	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.04);
 	&__nav {
 		position: relative;
 		display: flex;
@@ -20,10 +18,10 @@
 		height: 48px;
 	}
 	&.fixed {
-		position: fixed;
+		position: fixed !important;
 		padding: 16px 0;
 		background-color: $base-bg;
-		box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.04);
+		box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.04) !important;
 		animation: move-header 0.6s ease;
 		.menu {
 			color: $text-dark;
@@ -91,7 +89,15 @@
 		}
 	}
 }
+
 .index {
+	.header {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		box-shadow: none;
+	}
 	.menu_white {
 		color: $text-white;
 		.menu__item {
@@ -113,6 +119,13 @@
 }
 
 .page-about-us {
+	.header {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		box-shadow: none;
+	}
 	.menu {
 		color: $text-white;
 		&__item {
