@@ -7,10 +7,17 @@
 		position: relative;
 		width: 100%;
 		height: 352px;
-		> img {
+		overflow: hidden;
+		img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+			@include transition(transform 0.3s);
+		}
+		&:hover {
+			img {
+				@include transform(scale(1.1));
+			}
 		}
 	}
 	&__btn {
@@ -53,5 +60,137 @@
 		letter-spacing: 0.03em;
 		color: $title-color;
 		margin-bottom: 32px;
+	}
+}
+
+@media only screen and (max-width: 1560px) {
+	.services {
+		&__image {
+			height: 312px;
+		}
+		&__btn {
+			width: 300px;
+			height: 100px;
+		}
+		&__info {
+			padding-left: 88px;
+			.subtitle {
+				&_left {
+					left: 50px;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1199.8px) {
+	.services {
+		padding-bottom: 60px;
+		&__item {
+			margin-bottom: 60px;
+		}
+		&__image {
+			height: 240px;
+			overflow: visible;
+			&:hover {
+				img {
+					@include transform(scale(1));
+				}
+			}
+		}
+		&__btn {
+			width: 240px;
+			height: 80px;
+			&::after {
+				width: 112px;
+			}
+		}
+		&__info {
+			padding-left: 48px;
+			.subtitle {
+				font-size: $font-size-h4;
+				&_left {
+					left: 30px;
+				}
+			}
+		}
+		&__title {
+			font-size: $font-size-h3;
+			line-height: $line-height-h3;
+			margin-bottom: 22px;
+		}
+	}
+}
+
+@media only screen and (max-width: 991.8px) {
+	.services {
+		&__image {
+			height: 200px;
+		}
+		&__btn {
+			width: 180px;
+			height: 60px;
+		}
+		&__info {
+			padding-left: 20px;
+			.subtitle {
+				font-size: $base-fs;
+				&_left {
+					left: 10px;
+				}
+				h3 {
+					margin-left: -10px;
+				}
+			}
+		}
+		&__title {
+			font-size: $font-size-h4;
+			line-height: $line-height-h4;
+			margin-bottom: 16px;
+		}
+	}
+}
+
+@media only screen and (max-width: 767.8px) {
+	.services {
+		padding-bottom: 20px;
+		&__item {
+			margin-bottom: 60px;
+		}
+		&__image {
+			height: 210px;
+			margin-bottom: 30px;
+		}
+		&__btn {
+			left: auto;
+			right: 0;
+		}
+		&__info {
+			padding-left: 50px;
+			.subtitle {
+				&_left {
+					left: 36px;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 575.8px) {
+	.services {
+		&__image {
+			height: 180px;
+		}
+		&__info {
+			padding-left: 32px;
+			.subtitle {
+				&_left {
+					left: 28px;
+				}
+			}
+		}
+		&__title {
+			font-size: $font-size-h4 - 4px;
+		}
 	}
 }
