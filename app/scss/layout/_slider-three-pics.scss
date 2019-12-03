@@ -35,7 +35,7 @@
 	&::after {
 		content: "";
 		width: 223px;
-		border-top: 1px solid #c4c4c4;
+		border-top: 1px solid $border-gary;
 		position: absolute;
 		bottom: 0;
 		right: 274px;
@@ -53,15 +53,6 @@
 			line-height: $line-height-h4;
 			letter-spacing: 0.03em;
 			color: $text-white;
-		}
-		&::before {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 100%);
 		}
 		> img {
 			width: 100%;

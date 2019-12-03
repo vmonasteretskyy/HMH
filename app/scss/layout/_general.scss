@@ -209,7 +209,7 @@ h6 {
 		&::after {
 			content: "";
 			width: 64.5%;
-			border-top: 1px solid #c4c4c4;
+			border-top: 1px solid $border-gary;
 			position: absolute;
 			bottom: 0;
 			left: 50%;
@@ -309,7 +309,14 @@ h6 {
 			}
 		}
 		> a {
-			color: $base-text-color;
+			&:hover {
+				color: $base-text-color;
+			}
+		}
+		&_home {
+			> a {
+				color: $base-text-color;
+			}
 		}
 	}
 }

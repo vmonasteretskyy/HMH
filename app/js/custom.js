@@ -186,7 +186,7 @@ $(document).ready(function() {
 			});
 	});
 
-	// slider .slider three image
+	// slider slider three image
 	$(function() {
 		$(".slider-three-pics")
 			.on("init", function(event, slick) {
@@ -212,6 +212,15 @@ $(document).ready(function() {
 				let findCurrentBlock = $(this).find(".current");
 				findCurrentBlock.text(nextSlide + 1);
 			});
+	});
+
+	// slider
+	$(".slider-examples-goods").slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		// autoplay: true,
+		arrows: true,
+		autoplaySpeed: 2000
 	});
 
 	// animation on page
