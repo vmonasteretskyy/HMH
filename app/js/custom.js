@@ -220,7 +220,27 @@ $(document).ready(function() {
 		slidesToScroll: 1,
 		// autoplay: true,
 		arrows: true,
-		autoplaySpeed: 2000
+		autoplaySpeed: 2000,
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 500,
+				settings: {
+					slidesToShow: 1
+				}
+			}
+		]
 	});
 
 	// animation on page

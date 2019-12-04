@@ -16,6 +16,7 @@ body {
 	color: $base-text-color;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	overflow-x: hidden;
 }
 
 h1,
@@ -287,6 +288,7 @@ h6 {
 	margin-bottom: 40px;
 	&__list {
 		display: flex;
+		flex-wrap: wrap;
 		font-size: $base-fs - 2px;
 		letter-spacing: 0.15em;
 	}
@@ -406,6 +408,46 @@ h6 {
 	}
 }
 
+/* style radio input start */
+.label-radio-input {
+	display: flex;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+	margin-right: 28px;
+	input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+
+		&:checked ~ .radio-input-checkmark {
+			&::after {
+				border-color: #312e2e;
+			}
+		}
+	}
+	.radio-input-checkmark {
+		position: relative;
+		display: block;
+		height: 28px;
+		width: 28px;
+		@include radius(50%);
+		cursor: pointer;
+		user-select: none;
+		&::after {
+			content: "";
+			position: absolute;
+			display: block;
+			left: -6px;
+			top: -6px;
+			width: 40px;
+			height: 40px;
+			border: 1px solid #d2cccc;
+			@include radius(50%);
+		}
+	}
+}
+
 @media only screen and (max-width: 1560px) {
 	.btn {
 		height: 54px;
@@ -518,6 +560,17 @@ h6 {
 
 	.pagination {
 		margin-bottom: 100px;
+	}
+
+	.label-radio-input {
+		.radio-input-checkmark {
+			height: 22px;
+			width: 22px;
+			&::after {
+				width: 34px;
+				height: 34px;
+			}
+		}
 	}
 }
 
