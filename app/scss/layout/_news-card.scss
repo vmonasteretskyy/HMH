@@ -47,6 +47,30 @@
 		margin-top: 10px;
 		color: $text-dark;
 	}
+	&__tag {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		font-family: $second-font-family;
+		font-weight: 500;
+		font-size: $base-fs - 4px;
+		line-height: 160%;
+		color: #9e9797;
+		margin-top: 7px;
+		> li {
+			display: flex;
+			margin-right: 22px;
+			align-items: center;
+			&::before {
+				content: "";
+				background: url(../images/icons/tag.svg) no-repeat center center/contain;
+				width: 14px;
+				height: 14px;
+				display: block;
+				margin-right: 6px;
+			}
+		}
+	}
 }
 
 @media only screen and (max-width: 1199.8px) {
@@ -65,6 +89,17 @@
 			font-size: $base-fs - 5px;
 			> time {
 				margin-right: 20px;
+			}
+		}
+		&__tag {
+			font-size: $base-fs - 6px;
+			margin-top: 4px;
+			> li {
+				margin-right: 18px;
+				&::before {
+					width: 10px;
+					height: 10px;
+				}
 			}
 		}
 	}

@@ -245,4 +245,46 @@ $(document).ready(function() {
 
 	// animation on page
 	new WOW().init();
+
+	// open video
+	$(".video__play").click(function(e) {
+		e.preventDefault();
+		$("iframe").attr("src", "");
+		$(".video__cover").removeClass("hide");
+		let thisParent = $(this)
+			.parent()
+			.parent();
+		let videoStc = thisParent.data("src");
+		let videoPlayer = thisParent.find("iframe");
+		videoPlayer.attr("src", videoStc + "?autoplay=1&amp;loop=1&amp;controls=0&amp;showinfo=0&amp;");
+		thisParent.find(".video__cover").addClass("hide");
+	});
+
+	$(document.body).click(function(e) {
+		$("iframe").attr("src", "");
+		$(".video__cover").removeClass("hide");
+	});
+
+	$(".video").click(function(e) {
+		e.stopPropagation();
+	});
+
+	// show all video
+	$(".show-all-video").click(function() {
+		$(this)
+			.parent()
+			.addClass("show");
+		$(".video-block__all-video").prepend(
+			'<div class="col-12 col-md-4 col-lg-3"><div class="video video_small" data-src="https://www.youtube.com/embed/0Wr8WBbMS4Y"><iframe id="videoPlayer" src="" frameborder="0" allowfullscreen="1"allow="autoplay; encrypted-media"></iframe><div class="video__cover"><img src="images/video/image-2.jpg" alt=""><span class="video__text">How we create a unique design</span><button class="video__play"><img src="images/icons/play.svg" alt=""></button></div></div></div>'
+		);
+	});
+
+	// show all download list
+	$(".show-all-list").click(function() {
+		$(this)
+			.parent()
+			.find(".download-list-all")
+			.slideDown();
+		$(this).css("display", "none");
+	});
 });
