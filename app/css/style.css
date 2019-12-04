@@ -1175,4 +1175,22 @@ h1, h2, h3, h4, h5, h6 { font-family: "Akrobat", sans-serif; font-weight: 600; }
   .services__info .subtitle_left { left: 28px; }
   .services__title { font-size: 22px; } }
 
+.sitemap { padding: 40px 0; }
+
+.sitemap h1 { text-align: center; }
+
+.sitemap__menu { margin-top: 40px; }
+
+.sitemap__item { margin-bottom: 20px; }
+
+.sitemap__item > ul { margin: 20px 0 0 30px; }
+
+.sitemap__item > ul li { margin-bottom: 14px; }
+
+.sitemap__item > ul li a { opacity: 0.6; }
+
+.sitemap a { transition: 0.3s; -webkit-transition: 0.3s; -moz-transition: 0.3s; -ms-transition: 0.3s; -o-transition: 0.3s; opacity: 0.9; }
+
+.sitemap a:hover { color: #000; opacity: 1; }
+
 /*# sourceMappingURL=style.css.map */

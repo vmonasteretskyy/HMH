@@ -1,0 +1,29 @@
+.sitemap {
+	padding: 40px 0;
+	h1 {
+		text-align: center;
+	}
+	&__menu {
+		margin-top: 40px;
+	}
+	&__item {
+		margin-bottom: 20px;
+		> ul {
+			margin: 20px 0 0 30px;
+			li {
+				margin-bottom: 14px;
+				a {
+					opacity: 0.6;
+				}
+			}
+		}
+	}
+	a {
+		@include transition(0.3s);
+		opacity: 0.9;
+		&:hover {
+			color: #000;
+			opacity: 1;
+		}
+	}
+}
