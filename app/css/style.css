@@ -689,7 +689,7 @@ h1, h2, h3, h4, h5, h6 { font-family: "Akrobat", sans-serif; font-weight: 600; }
 
 .news__tag { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; font-family: "Akrobat", sans-serif; font-weight: 500; font-size: 14px; line-height: 160%; color: #9e9797; margin-top: 7px; }
 
-.news__tag > li { display: -webkit-flex; display: -ms-flexbox; display: flex; margin-right: 22px; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+.news__tag > li { display: -webkit-flex; display: -ms-flexbox; display: flex; margin-right: 22px; -webkit-align-items: center; -ms-flex-align: center; align-items: center; margin-bottom: 10px; }
 
 .news__tag > li::before { content: ""; background: url(../images/icons/tag.svg) no-repeat center center/contain; width: 14px; height: 14px; display: block; margin-right: 6px; }
 
@@ -1311,6 +1311,33 @@ h1, h2, h3, h4, h5, h6 { font-family: "Akrobat", sans-serif; font-weight: 600; }
 
 @media only screen and (max-width: 430px) { .video { height: 190px; }
   .video_small { height: 190px; } }
+
+.open-news { position: relative; }
+
+.open-news .subtitle { top: 240px; font-size: 40px; max-height: 410px; }
+
+.open-news .subtitle > h3 { margin-left: -30px; }
+
+.open-news .news-author { font-family: "Akrobat", sans-serif; display: block; margin-bottom: 26px; }
+
+.open-news .news__tag { margin-top: 40px; }
+
+.download { border-top: 2px solid #f5f5f5; padding: 80px 0 197px; }
+
+@media only screen and (max-width: 1560px) { .download .download-block__title img { margin-right: 20px; width: 28px; min-width: 28px; }
+  .download .download-block__list { margin-left: 50px; } }
+
+@media only screen and (max-width: 1199.8px) { .open-news .subtitle { top: 140px; font-size: 32px; max-height: 350px; }
+  .download { padding: 60px 0 100px; } }
+
+@media only screen and (max-width: 991.8px) { .open-news .subtitle { left: -20px; font-size: 26px; max-height: 300px; }
+  .open-news .subtitle > h3 { margin-left: -10px; }
+  .open-news .news__tag { margin-top: 30px; }
+  .download { padding: 40px 0 60px; }
+  .download .download-block { max-width: 360px; margin: 0 auto 40px; }
+  .download .download-block:last-of-type { margin-bottom: 0; } }
+
+@media only screen and (max-width: 575.8px) { .open-news .subtitle { left: -10px; font-size: 20px; max-height: 300px; } }
 
 .sitemap { padding: 40px 0; }
 
