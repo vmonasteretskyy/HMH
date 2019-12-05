@@ -3,3 +3,12 @@
 	align-items: center;
 	justify-content: center;
 }
+
+%title-h3 {
+	font-family: $second-font-family;
+	font-weight: 600;
+	font-size: $font-size-h3;
+	line-height: $line-height-h3;
+	letter-spacing: 0.03em;
+	color: $title-color;
+}

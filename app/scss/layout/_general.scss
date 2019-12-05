@@ -315,7 +315,7 @@ h6 {
 				color: $base-text-color;
 			}
 		}
-		&_home {
+		&:first-of-type {
 			> a {
 				color: $base-text-color;
 			}

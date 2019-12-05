@@ -2,12 +2,7 @@
 	padding: 173px 0 160px;
 	background: url(../images/bg-1.svg) no-repeat left top;
 	&__title {
-		font-family: $second-font-family;
-		font-weight: 600;
-		font-size: $font-size-h3;
-		line-height: $line-height-h3;
-		letter-spacing: 0.03em;
-		color: $title-color;
+		@extend %title-h3;
 		margin-bottom: 48px;
 	}
 	.card {
