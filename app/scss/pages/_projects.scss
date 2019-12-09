@@ -1,0 +1,241 @@
+.our-work {
+	position: relative;
+	padding: 122px 0 160px;
+	margin-top: -100px;
+	border-bottom: 1px solid $border-gary;
+	background: url(../images/bg-our-work.svg) no-repeat center top/contain;
+	&__slider {
+		margin-top: 44px;
+		.slick-arrow {
+			@include circle(64px, 64px);
+			background-color: $button-white;
+			box-shadow: -16px 24px 24px rgba(0, 0, 0, 0.08);
+			background-size: 18px;
+			&:focus,
+			&:hover {
+				background-color: $button-white;
+				background-size: 18px;
+			}
+		}
+	}
+	&__card {
+		position: relative;
+		height: 412px;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 100%);
+			z-index: 1;
+		}
+		.card__image {
+			height: inherit;
+		}
+		.card__btn {
+			width: 228px;
+			height: 112px;
+			z-index: 3;
+		}
+	}
+	&__subtitle {
+		position: absolute;
+		top: 5px;
+		left: 24px;
+		font-family: $second-font-family;
+		font-weight: 600;
+		font-size: $font-size-h2;
+		line-height: $line-height-h2;
+		letter-spacing: 0.03em;
+		color: $title-white;
+		z-index: 2;
+	}
+	.scroll-down {
+		top: 42%;
+	}
+}
+
+.projects {
+	padding: 80px 0 140px;
+	.title-section {
+		margin-bottom: 80px;
+	}
+	.col-12 {
+		margin-bottom: 80px;
+	}
+}
+
+.our-project {
+	padding-bottom: 220px;
+	&__title {
+		font-family: $second-font-family;
+		font-weight: 600;
+		font-size: $font-size-h2;
+		line-height: $line-height-h2;
+		letter-spacing: 0.03em;
+		color: $title-color;
+		margin-bottom: 32px;
+	}
+	.subtitle {
+		min-height: 420px;
+		top: 10px;
+		bottom: auto;
+		font-size: $font-size-h2 - 8px;
+	}
+}
+
+@media only screen and (min-width: 1710px) {
+	.our-work {
+		&__slider {
+			.slick-prev {
+				left: -80px;
+			}
+			.slick-next {
+				right: -80px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1560px) {
+	.our-work {
+		&__card {
+			height: 300px;
+			.card__btn {
+				height: 100px;
+			}
+		}
+		&__subtitle {
+			font-size: $font-size-h2 - 12px;
+		}
+	}
+}
+
+@media only screen and (max-width: 1199.8px) {
+	.our-work {
+		padding: 80px 0;
+		margin-top: -80px;
+		&__slider {
+			.slick-arrow {
+				width: 50px;
+				height: 50px;
+				background-size: 16px;
+				&:focus,
+				&:hover {
+					background-size: 16px;
+				}
+			}
+		}
+		&__card {
+			height: 328px;
+			.card__btn {
+				width: 200px;
+				height: 80px;
+			}
+		}
+		&__subtitle {
+			left: 20px;
+			font-size: $font-size-h3;
+			line-height: $line-height-h3;
+		}
+	}
+
+	.projects {
+		padding: 60px 0 80px;
+		.title-section {
+			margin-bottom: 60px;
+		}
+		.col-12 {
+			margin-bottom: 40px;
+		}
+	}
+
+	.our-project {
+		padding-bottom: 160px;
+		&__title {
+			font-size: $font-size-h3;
+			line-height: $line-height-h3;
+			margin-bottom: 26px;
+		}
+		.subtitle {
+			min-height: 320px;
+			font-size: $font-size-h3 - 4px;
+			&_left {
+				left: -30px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 991.8px) {
+	.our-work {
+		background-size: 1000px;
+		&__card {
+			height: auto;
+			.card__image {
+				flex-direction: column;
+			}
+			.card__btn {
+				position: static;
+				width: 100%;
+			}
+		}
+		&__subtitle {
+			font-size: $font-size-h4 - 4px;
+			line-height: 120%;
+		}
+	}
+
+	.projects {
+		padding: 60px 0;
+		.title-section {
+			margin-bottom: 40px;
+		}
+		.col-12 {
+			margin-bottom: 30px;
+		}
+	}
+
+	.our-project {
+		padding-bottom: 80px;
+		&__title {
+			font-size: $font-size-h4;
+			line-height: $line-height-h4;
+		}
+		.subtitle {
+			min-height: 280px;
+			font-size: $font-size-h4;
+		}
+	}
+}
+
+@media only screen and (max-width: 575.8px) {
+	.our-work {
+		background-size: 800px;
+		&__subtitle {
+			font-size: $base-fs + 2px;
+		}
+		&__slider {
+			margin-top: 24px;
+		}
+	}
+
+	.projects {
+		padding: 40px 0;
+	}
+
+	.our-project {
+		padding-bottom: 60px;
+		&__title {
+			font-size: $base-fs + 2px;
+			margin-bottom: 20px;
+		}
+		.subtitle {
+			top: 0;
+			font-size: $base-fs;
+			left: -6px;
+		}
+	}
+}
