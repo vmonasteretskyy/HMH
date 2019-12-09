@@ -73,7 +73,7 @@ $(document).ready(function() {
 		e.preventDefault();
 		$("body,html").animate(
 			{
-				scrollTop: $(".company").offset().top
+				scrollTop: $(".scroll-to").offset().top
 			},
 			1000
 		);

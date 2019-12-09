@@ -34,29 +34,6 @@
 			margin-right: 56px;
 		}
 	}
-	.scroll-down {
-		display: block;
-		position: absolute;
-		left: 40px;
-		top: 50%;
-		font-size: 16px;
-		color: #d2cccc;
-		padding: 0;
-		@include transform(translateY(-50%));
-		&::before {
-			content: "";
-			display: block;
-			width: 1px;
-			height: 100px;
-			border-left: 1px solid #d2cccc;
-			margin: 0 auto 18px;
-		}
-		p {
-			@include transform(rotate(-180deg));
-			writing-mode: vertical-rl;
-			text-orientation: mixed;
-		}
-	}
 }
 
 .slider-first {
@@ -254,9 +231,6 @@
 				margin-right: 26px;
 			}
 		}
-		.scroll-down {
-			left: 20px;
-		}
 	}
 
 	.slider-first {
@@ -308,9 +282,6 @@
 			.social-link__item {
 				margin-right: 20px;
 			}
-		}
-		.scroll-down {
-			display: none;
 		}
 	}
 
