@@ -1,0 +1,63 @@
+/* style select */
+.jq-selectbox {
+	min-width: 264px;
+	height: 56px;
+	&__select {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: inherit;
+		padding: 0 40px 0 16px;
+		background: $base-bg;
+		font-family: $second-font-family;
+		font-size: $base-fs + 2px;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: $base-text-color;
+		border: 1px solid $border-dark;
+		@include radius(0);
+	}
+	&__select-text {
+		width: 100% !important;
+	}
+	&__trigger {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 40px;
+		height: 100%;
+	}
+	&__trigger-arrow {
+		position: absolute;
+		top: 50%;
+		left: 6px;
+		@include transform(translateY(-50%));
+		&::before {
+			content: "";
+			display: block;
+			width: 18px;
+			height: 18px;
+			background: url(../images/icons/arrow-down-dark.svg) no-repeat center center/contain;
+		}
+	}
+	&__dropdown {
+		width: 100%;
+		font-family: $second-font-family;
+		font-size: $base-fs + 2px;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: $base-text-color;
+		margin-top: -10px;
+		border: 1px solid #9e9797;
+		padding: 12px 16px;
+		ul {
+			max-height: 180px;
+		}
+	}
+	li {
+		margin-bottom: 20px;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}

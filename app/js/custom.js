@@ -292,4 +292,8 @@ $(document).ready(function() {
 			.slideDown();
 		$(this).hide();
 	});
+
+	// if ($("select").length === 1) {
+	$("select").styler();
+	// }
 });

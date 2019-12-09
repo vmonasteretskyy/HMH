@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="css/components/bootstrap-reboot.min.css">
     <link rel="stylesheet" type="text/css" href="css/components/bootstrap-grid.min.css">
     <link rel="stylesheet" type="text/css" href="css/components/animate.css">
-
+    <link rel="stylesheet" type="text/css" href="css/components/jquery.formstyler.css">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
@@ -103,61 +103,94 @@
     </header>
 
     <main>
-        <section class="sitemap">
+        <div class="breadcrumb">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12 col-md-10 col-lg-8">
-                        <h1>Sitemap</h1>
-                        <nav>
-                            <ul class="sitemap__menu">
-                                <li class="sitemap__item">
-                                    <a href="index.html">Home</a>
-                                </li>
-                                <li class="sitemap__item">
-                                    <a href="projects.html">Projects</a>
-                                    <ul>
-                                        <li><a href="category-metal.html">Metal</a></li>
-                                        <li><a href="category-glass.html">Glass</a></li>
-                                        <li><a href="open-project.html">Open project</a></li>
-                                    </ul>
-                                </li>
-                                <li class="sitemap__item">
-                                    <a href="services.html">Services</a>
-                                    <ul>
-                                        <li><a href="#">Rolling</a></li>
-                                        <li><a href="#">Cladding</a></li>
-                                        <li><a href="#">Engraving</a></li>
-                                        <li><a href="service-open.html">Machine and miliings</a></li>
-                                        <li><a href="#">Laser cutting</a></li>
-                                        <li><a href="#">Punch-press</a></li>
-                                        <li><a href="#">Welding</a></li>
-                                        <li><a href="#">Polishing</a></li>
-                                        <li><a href="#">Press break</a></li>
-                                        <li><a href="#">Water-jet cutting</a></li>
-                                        <li><a href="#">Grills</a></li>
-                                        <li><a href="#">Wrought</a></li>
-                                        <li><a href="#">Materials</a></li>
-                                        <li><a href="#">Coatings & finishing</a></li>
-                                    </ul>
-                                </li>
-                                <li class="sitemap__item">
-                                    <a href="information.html">Information</a>
-                                    <ul>
-                                        <li><a href="open-news.html">Open news</a></li>
-                                    </ul>
-                                </li>
-                                <li class="sitemap__item">
-                                    <a href="about-us.html">About Us</a>
-                                </li>
-                                <li class="sitemap__item">
-                                    <a href="contact-us.html">Contact Us</a>
-                                </li>
-                            </ul>
-                        </nav>
+                <nav>
+                    <ol class="breadcrumb__list">
+                        <li class="breadcrumb__item"><a href="#">Home</a></li>
+                        <li class="breadcrumb__item"><a href="#">Metal</a></li>
+                        <li class="breadcrumb__item">Category</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <section class="category">
+            <div class="container">
+                <div class="category__header">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <select name="material" class="select-style">
+                                <option value="">material</option>
+                                <option value="">material</option>
+                                <!-- <option value="">material</option> -->
+                                <!-- <option value="">material</option> -->
+                                <!-- <option value="">material</option> -->
+                            </select>
+                            <!-- <select name="typeOfMetal" class="select-style">
+                                <option value="">type of metal work</option>
+                                <option value="">type of metal work</option>
+                                <option value="">type of metal work</option>
+                                <option value="">type of metal work</option>
+                                <option value="">type of metal work</option>
+                            </select> -->
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="category__sorting d-flex justify-content-end align-items-center">
+                                <span>Sorting goods</span>
+                                <!-- <select name="" id="" class="select-style select-style_dark">
+                                    <option value="">by date added</option>
+                                    <option value="">by date added</option>
+                                    <option value="">by date added</option>
+                                    <option value="">by date added</option>
+                                </select> -->
+                                <div class="category__sorting_btn-group">
+                                    <button type="button">
+
+                                    </button>
+                                    <button type="button">
+
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row category__cards">
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="card">
+                            <div class="card__image">
+                                <img src="images/stairs/image-1.jpg" alt="">
+                                <div class="card__btn">
+                                    <a href="#" class="btn btn-white btn_more">view</a>
+                                </div>
+                            </div>
+                            <div class="card__desc">
+                                <h4 class="card__title">Name of the stairs or other product</h4>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <nav class="d-flex justify-content-center">
+            <ul class="pagination d-flex align-items-center">
+                <li class="pagination__item pagination__item_prev">
+                    <a class="pagination__link_prev" href="#">previous</a>
+                </li>
+                <li class="pagination__item"><a class="pagination__link" href="#">1</a></li>
+                <li class="pagination__item active"><a class="pagination__link" href="#">2</a></li>
+                <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+                <li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
+                <li class="pagination__item">...</li>
+                <li class="pagination__item"><a class="pagination__link" href="#">12</a></li>
+                <li class="pagination__item pagination__item_next">
+                    <a class="pagination__link_next" href="#">next on</a>
+                </li>
+            </ul>
+        </nav>
+
     </main>
 
     <footer class="footer">
@@ -216,6 +249,7 @@
     <script src="js/jquery-migrate-1.4.1.min.js"></script>
     <script src="js/components/slick.min.js"></script>
     <script src="js/components/wow.min.js"></script>
+    <script src="js/components/jquery.formstyler.min.js"></script>
     <script src="js/custom.js"></script>
 </body>
 

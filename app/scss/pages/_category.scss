@@ -1,0 +1,13 @@
+.category {
+	padding-bottom: 80px;
+	&__header {
+		margin-bottom: 80px;
+		padding-bottom: 40px;
+		border-bottom: 1px solid #d2cccc;
+	}
+	&__cards {
+		.col-12 {
+			margin-bottom: 80px;
+		}
+	}
+}
