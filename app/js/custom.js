@@ -16,14 +16,14 @@ $(document).ready(function() {
 		$(".menu__item").hover(
 			function() {
 				$(this)
-					.find(".dropdown")
+					.find(".dropdown-menu")
 					.stop(true, true)
 					.delay(200)
 					.fadeIn();
 			},
 			function() {
 				$(this)
-					.find(".dropdown")
+					.find(".dropdown-menu")
 					.stop(true, true)
 					.delay(200)
 					.fadeOut();
@@ -32,15 +32,15 @@ $(document).ready(function() {
 	}
 
 	function openSubMenuOnClick() {
-		$(".dropdown__toggle").click(function() {
+		$(".dropdown-menu__toggle").click(function() {
 			$(this)
 				.parent()
-				.next(".dropdown")
+				.next(".dropdown-menu")
 				.slideToggle();
 			$(this)
 				.closest("li")
 				.siblings("li")
-				.find(".dropdown")
+				.find(".dropdown-menu")
 				.slideUp();
 		});
 	}
@@ -52,10 +52,10 @@ $(document).ready(function() {
 	}
 
 	$("body").click(function() {
-		$(".dropdown").slideUp();
+		$(".dropdown-menu").slideUp();
 	});
 
-	$(".dropdown__toggle, .menu__dropdown").click(function(e) {
+	$(".dropdown-menu__toggle, .menu__dropdown").click(function(e) {
 		e.stopPropagation();
 	});
 
@@ -63,7 +63,7 @@ $(document).ready(function() {
 	$(".menu__btn").on("click", function() {
 		$(this).toggleClass("active");
 		$(".menu").toggleClass("open");
-		$(".dropdown").slideUp();
+		$(".dropdown-menu").slideUp();
 		$("body").toggleClass("overflow-hidden");
 	});
 
