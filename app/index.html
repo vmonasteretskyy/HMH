@@ -15,7 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="css/components/bootstrap-reboot.min.css">
 	<link rel="stylesheet" type="text/css" href="css/components/bootstrap-grid.min.css">
 	<link rel="stylesheet" type="text/css" href="css/components/animate.css">
-
+	<link rel="stylesheet" type="text/css" href="css/components/jquery.formstyler.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
@@ -304,6 +304,35 @@
 		</section>
 	</main>
 
+	<!-- modal window -->
+	<div class="modal-window" id="sendMessage">
+		<div class="modal-window__content">
+			<div class="modal-window__body">
+				<button type="button" class="modal-window__close">
+					<img src="images/icons/close.svg" alt="close">
+				</button>
+				<div class="modal-window__form">
+					<form class="form">
+						<h1 class="title-section">Mail Us</h1>
+						<div class="form__group">
+							<input type="text" class="style-input" placeholder="NAME (required)">
+						</div>
+						<div class="form__group">
+							<input type="email" class="style-input" placeholder="EMAIL (required)">
+						</div>
+						<div class="form__group">
+							<input type="text" class="style-input" placeholder="Subject">
+						</div>
+						<div class="form__group">
+							<textarea cols="30" rows="10" class="style-textarea" placeholder="Message"></textarea>
+						</div>
+						<button type="submit" class="btn btn-black">send</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<footer class="footer">
 		<div class="container">
 			<div class="row justify-content-md-between justify-content-xl-around">
@@ -334,7 +363,7 @@
 				</div>
 				<div class="col-12 col-md-4 col-xl-3">
 					<p class="footer__text">Have a question or project idea? Feel free to contact us!</p>
-					<a href="#" class="btn btn-white">Send message</a>
+					<a href="#" class="btn btn-white open-pop-up" data-target="#sendMessage">Send message</a>
 				</div>
 				<div class="col-12">
 					<ul class="social-link footer__social-link">
@@ -360,6 +389,7 @@
 	<script src="js/jquery-migrate-1.4.1.min.js"></script>
 	<script src="js/components/slick.min.js"></script>
 	<script src="js/components/wow.min.js"></script>
+	<script src="js/components/jquery.formstyler.min.js"></script>
 	<script src="js/custom.js"></script>
 </body>
 

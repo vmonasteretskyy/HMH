@@ -310,7 +310,31 @@ $(document).ready(function() {
 		});
 	}
 
-	// if ($("select").length === 1) {
-	$("select").styler();
-	// }
+	// open modal window
+	$(".open-pop-up").click(function(e) {
+		e.preventDefault();
+		let dataTarget = $(this).attr("data-target");
+		if ($(this).attr("data-target")) {
+			$(dataTarget)
+				.fadeIn(400)
+				.addClass("show");
+			$("body").addClass("overflow-hidden");
+		}
+	});
+
+	// close modal window
+	$(".modal-window__close, .modal-window__content").click(function(e) {
+		e.preventDefault();
+		$(".modal-window")
+			.fadeOut(400)
+			.removeClass("show");
+		$("body").removeClass("overflow-hidden");
+	});
+
+	$(".modal-window__body").click(function(e) {
+		e.stopPropagation();
+	});
+
+	// style select
+	$(".select-style").styler();
 });

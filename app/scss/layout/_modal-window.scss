@@ -4,7 +4,7 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.3);
 	z-index: 999;
 	display: none;
 	cursor: pointer;
@@ -17,34 +17,26 @@
 		@include transition(transform 0.5s ease);
 		@include transform(translateY(-50%));
 		overflow-y: auto;
-		@extend %center-center;
 	}
 	&__body {
 		position: relative;
 		margin: 0 auto;
 		width: 100%;
-		max-width: 736px;
+		max-width: 720px;
 		background-color: $base-bg;
 		background-repeat: no-repeat;
-		@include radius(25px);
 		overflow: hidden;
 		cursor: default;
-		box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.08);
-		padding: 48px 128px;
+		padding: 80px 80px 90px;
 	}
 	&__close {
 		position: absolute;
-		top: 32px;
-		right: 40px;
-		width: 24px;
+		top: 25px;
+		left: 34px;
+		width: 30px;
 		display: flex;
 		cursor: pointer;
 		padding: 0;
-		&:hover {
-			svg {
-				fill: #fe4e4e;
-			}
-		}
 	}
 	&.show {
 		display: block;
@@ -52,29 +44,47 @@
 			@include transform(translateY(0));
 		}
 	}
-	&__title {
-		text-align: center;
-	}
 	&__form {
-		width: 384px;
-		margin: 48px auto 0;
+		width: 100%;
+		.form {
+			max-width: inherit;
+			.title-section {
+				font-size: $font-size-h2;
+				margin-bottom: 30px;
+			}
+			&__group {
+				display: flex;
+				margin-bottom: 28px;
+			}
+			.btn-black {
+				margin-top: 26px;
+			}
+		}
 	}
 }
 
-@media only screen and (max-width: 1199.8px) {
+@media only screen and (max-width: 991.8px) {
 	.modal-window {
 		&__body {
 			max-width: 550px;
 			width: 90%;
-			padding: 38px 68px;
+			padding: 60px 40px 40px;
 		}
 		&__close {
-			top: 22px;
-			right: 30px;
+			width: 26px;
+			left: auto;
+			right: 26px;
 		}
 		&__form {
-			width: 384px;
-			margin: 38px auto 0;
+			.form {
+				.title-section {
+					font-size: $font-size-h3;
+					margin-bottom: 20px;
+				}
+				&__group {
+					margin-bottom: 20px;
+				}
+			}
 		}
 	}
 }
@@ -82,7 +92,7 @@
 @media only screen and (max-width: 575.8px) {
 	.modal-window {
 		&__body {
-			padding: 48px 20px 28px;
+			padding: 40px 20px 20px;
 		}
 		&__close {
 			top: 12px;
@@ -90,8 +100,30 @@
 			width: 20px;
 		}
 		&__form {
-			width: 100%;
-			margin: 22px auto 0;
+			.form {
+				.title-section {
+					font-size: $font-size-h4 - 4px;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1200px) and (max-height: 870px) {
+	.modal-window {
+		&__body {
+			padding-bottom: 50px;
+		}
+		&__form {
+			.form {
+				.title-section {
+					font-size: $font-size-h3;
+					margin-bottom: 20px;
+				}
+				&__group {
+					margin-bottom: 20px;
+				}
+			}
 		}
 	}
 }
