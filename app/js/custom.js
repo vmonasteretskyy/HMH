@@ -293,6 +293,23 @@ $(document).ready(function() {
 		$(this).hide();
 	});
 
+	// sorting catalog
+	if ($(window).width() >= 992) {
+		$(".btn-sorting").click(function() {
+			$(this)
+				.closest("button")
+				.siblings("button")
+				.removeClass("active");
+			$(this).addClass("active");
+		});
+		$("#catalogRow").click(function() {
+			$("#sortingCatalog").addClass("category__cards_row");
+		});
+		$("#catalogGrid").click(function() {
+			$("#sortingCatalog").removeClass("category__cards_row");
+		});
+	}
+
 	// if ($("select").length === 1) {
 	$("select").styler();
 	// }
