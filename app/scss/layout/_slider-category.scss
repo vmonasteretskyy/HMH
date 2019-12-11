@@ -68,16 +68,6 @@
 		left: 0;
 		width: 48%;
 		border-top: 1px solid $border-gary;
-		animation: line-animate 2s;
-	}
-}
-
-@keyframes line-animate {
-	from {
-		width: 0;
-	}
-	to {
-		width: 48%;
 	}
 }
 

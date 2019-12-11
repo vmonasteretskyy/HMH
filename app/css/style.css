@@ -155,19 +155,13 @@ h1, h2, h3, h4, h5, h6 { font-family: "Akrobat", sans-serif; font-weight: 600; }
 
 .image__desc > small { display: block; font-size: 16px; line-height: 140%; letter-spacing: 0.15em; color: #d2cccc; margin-top: 4px; }
 
-.image__desc::after { content: ""; width: 64.5%; border-top: 1px solid #c4c4c4; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); -webkit-animation: line 2s; animation: line 2s; }
+.image__desc::after { content: ""; width: 64.5%; border-top: 1px solid #c4c4c4; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); }
 
 /* The typing effect */
 @-webkit-keyframes typing { from { width: 0; }
   to { width: 100%; } }
 @keyframes typing { from { width: 0; }
   to { width: 100%; } }
-
-@-webkit-keyframes line { from { width: 0; }
-  to { width: 64.5%; } }
-
-@keyframes line { from { width: 0; }
-  to { width: 64.5%; } }
 
 .slick-dots { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; position: absolute; z-index: 2; }
 
@@ -560,13 +554,7 @@ h1, h2, h3, h4, h5, h6 { font-family: "Akrobat", sans-serif; font-weight: 600; }
 
 .slider-category .prev-slider { left: 34%; }
 
-.slider-category .line { position: absolute; bottom: 0; left: 0; width: 48%; border-top: 1px solid #c4c4c4; -webkit-animation: line-animate 2s; animation: line-animate 2s; }
-
-@-webkit-keyframes line-animate { from { width: 0; }
-  to { width: 48%; } }
-
-@keyframes line-animate { from { width: 0; }
-  to { width: 48%; } }
+.slider-category .line { position: absolute; bottom: 0; left: 0; width: 48%; border-top: 1px solid #c4c4c4; }
 
 @media only screen and (max-width: 1560px) { .section-gray { background-size: 1734px; }
   .slider-category__img { width: 50%; height: 512px; }
@@ -1176,7 +1164,7 @@ h1, h2, h3, h4, h5, h6 { font-family: "Akrobat", sans-serif; font-weight: 600; }
 
 .slider-gallery::before { content: ""; position: absolute; left: 0; bottom: 0; width: 304px; height: 96px; background-color: #fff; z-index: 1; }
 
-.slider-gallery::after { content: ""; width: 223px; border-top: 1px solid #c4c4c4; position: absolute; bottom: 0; left: 40px; -webkit-animation: line 2s; animation: line 2s; z-index: 1; }
+.slider-gallery::after { content: ""; width: 223px; border-top: 1px solid #c4c4c4; position: absolute; bottom: 0; left: 40px; z-index: 1; }
 
 .slider-gallery .slick-dots { left: 114px; bottom: 24px; }
 
